@@ -1,0 +1,60 @@
+C:\Users\kesha\Workspaces\venv\Scripts\python.exe C:/Users/kesha/Workspaces/Odin/src/uav-mobility/core/archive/ChannelCapacityEvaluations.py
+===============================================================================
+                                     CVXPY                                     
+                                    v1.1.18                                    
+===============================================================================
+(CVXPY) Mar 02 04:47:43 PM: Your problem has 9 variables, 2 constraints, and 0 parameters.
+(CVXPY) Mar 02 04:47:43 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Mar 02 04:47:43 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Mar 02 04:47:43 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Mar 02 04:47:43 PM: Compiling problem (target solver=SCS).
+(CVXPY) Mar 02 04:47:43 PM: Reduction chain: FlipObjective -> Dcp2Cone -> CvxAttr2Constr -> ConeMatrixStuffing -> SCS
+(CVXPY) Mar 02 04:47:43 PM: Applying reduction FlipObjective
+(CVXPY) Mar 02 04:47:43 PM: Applying reduction Dcp2Cone
+(CVXPY) Mar 02 04:47:43 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Mar 02 04:47:43 PM: Applying reduction ConeMatrixStuffing
+(CVXPY) Mar 02 04:47:43 PM: Applying reduction SCS
+(CVXPY) Mar 02 04:47:43 PM: Finished problem compilation (took 3.705e-03 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Mar 02 04:47:43 PM: Invoking solver SCS  to obtain a solution.
+------------------------------------------------------------------
+	       SCS v3.1.0 - Splitting Conic Solver
+	(c) Brendan O'Donoghue, Stanford University, 2012
+------------------------------------------------------------------
+problem:  variables n: 11, constraints m: 16
+cones: 	  z: primal zero / dual free vars: 1
+	  l: linear vars: 9
+	  e: exp vars: 6, dual exp vars: 0
+settings: eps_abs: 1.0e-06, eps_rel: 1.0e-06, eps_infeas: 1.0e-07
+	  alpha: 1.50, scale: 1.00e-01, adaptive_scale: 1
+	  max_iters: 1000000, normalize: 1, warm_start: 0
+	  acceleration_lookback: 10, acceleration_interval: 10
+lin-sys:  sparse-direct
+	  nnz(A): 38, nnz(P): 0
+------------------------------------------------------------------
+ iter | pri res | dua res |   gap   |   obj   |  scale  | time (s)
+------------------------------------------------------------------
+     0| 2.52e+01  1.47e+00  8.91e+01 -4.45e+01  1.00e-01  2.53e-03 
+   150| 8.90e-07  1.09e-06  1.16e-06 -5.31e-01  7.34e-01  4.40e-03 
+------------------------------------------------------------------
+status:  solved
+timings: total: 4.79e-03s = setup: 3.78e-04s + solve: 4.41e-03s
+	 lin-sys: 6.06e-05s, cones: 1.74e-03s, accel: 7.20e-06s
+------------------------------------------------------------------
+objective = -0.531003
+------------------------------------------------------------------
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Mar 02 04:47:43 PM: Problem status: optimal
+(CVXPY) Mar 02 04:47:43 PM: Optimal value: 5.310e-01
+(CVXPY) Mar 02 04:47:43 PM: Compilation took 3.705e-03 seconds
+(CVXPY) Mar 02 04:47:43 PM: Solver (including time spent in interface) took 0.000e+00 seconds
+[INFO] ChannelCapacityEvaluations main: Problem Status = optimal | Optimal Value = 0.5310018780710792 | Optimal Input Distribution = [4.99996903e-01 8.90169412e-07 8.84227386e-07 8.80884321e-07 8.79801180e-07 8.80884321e-07 8.84227385e-07 8.90169412e-07 4.99996903e-01]
+
+Process finished with exit code 0

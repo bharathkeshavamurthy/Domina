@@ -1,0 +1,60 @@
+C:\Users\kesha\Workspaces\venv\Scripts\python.exe C:/Users/kesha/Workspaces/Odin/src/uav-mobility/core/archive/ChannelCapacityEvaluations.py
+===============================================================================
+                                     CVXPY                                     
+                                    v1.1.18                                    
+===============================================================================
+(CVXPY) Mar 02 04:46:27 PM: Your problem has 3 variables, 2 constraints, and 0 parameters.
+(CVXPY) Mar 02 04:46:27 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Mar 02 04:46:27 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Mar 02 04:46:27 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Mar 02 04:46:27 PM: Compiling problem (target solver=SCS).
+(CVXPY) Mar 02 04:46:27 PM: Reduction chain: FlipObjective -> Dcp2Cone -> CvxAttr2Constr -> ConeMatrixStuffing -> SCS
+(CVXPY) Mar 02 04:46:27 PM: Applying reduction FlipObjective
+(CVXPY) Mar 02 04:46:27 PM: Applying reduction Dcp2Cone
+(CVXPY) Mar 02 04:46:27 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Mar 02 04:46:27 PM: Applying reduction ConeMatrixStuffing
+(CVXPY) Mar 02 04:46:27 PM: Applying reduction SCS
+(CVXPY) Mar 02 04:46:27 PM: Finished problem compilation (took 0.000e+00 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Mar 02 04:46:27 PM: Invoking solver SCS  to obtain a solution.
+------------------------------------------------------------------
+	       SCS v3.1.0 - Splitting Conic Solver
+	(c) Brendan O'Donoghue, Stanford University, 2012
+------------------------------------------------------------------
+problem:  variables n: 6, constraints m: 13
+cones: 	  z: primal zero / dual free vars: 1
+	  l: linear vars: 3
+	  e: exp vars: 9, dual exp vars: 0
+settings: eps_abs: 1.0e-06, eps_rel: 1.0e-06, eps_infeas: 1.0e-07
+	  alpha: 1.50, scale: 1.00e-01, adaptive_scale: 1
+	  max_iters: 1000000, normalize: 1, warm_start: 0
+	  acceleration_lookback: 10, acceleration_interval: 10
+lin-sys:  sparse-direct
+	  nnz(A): 15, nnz(P): 0
+------------------------------------------------------------------
+ iter | pri res | dua res |   gap   |   obj   |  scale  | time (s)
+------------------------------------------------------------------
+     0| 1.63e+01  1.43e+00  8.00e+01 -4.03e+01  1.00e-01  4.20e-04 
+   125| 2.40e-10  2.92e-10  3.68e-09 -5.85e-01  1.03e+00  2.92e-03 
+------------------------------------------------------------------
+status:  solved
+timings: total: 3.31e-03s = setup: 3.91e-04s + solve: 2.92e-03s
+	 lin-sys: 3.49e-05s, cones: 2.48e-03s, accel: 5.10e-06s
+------------------------------------------------------------------
+objective = -0.584963
+------------------------------------------------------------------
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Mar 02 04:46:27 PM: Problem status: optimal
+(CVXPY) Mar 02 04:46:27 PM: Optimal value: 5.850e-01
+(CVXPY) Mar 02 04:46:27 PM: Compilation took 0.000e+00 seconds
+(CVXPY) Mar 02 04:46:27 PM: Solver (including time spent in interface) took 0.000e+00 seconds
+[INFO] ChannelCapacityEvaluations main: Problem Status = optimal | Optimal Value = 0.5849625007209966 | Optimal Input Distribution = [0.33333333 0.33333333 0.33333333]
+
+Process finished with exit code 0
