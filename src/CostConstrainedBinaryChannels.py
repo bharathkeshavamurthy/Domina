@@ -18,7 +18,7 @@ CONFIGURATIONS
 """
 cp.set_num_threads(8)
 p = 0.1  # The error or erasure probability
-cost = 0.1  # The cost associated with the mean of the binary input distribution
+cost = 1.0  # The cost associated with the mean of the binary input distribution
 
 """
 UTILITIES
@@ -72,7 +72,8 @@ print(f'[INFO] CostConstrainedBinaryChannels | {channel_type}')
 
 print(f'[INFO] CostConstrainedBinaryChannels CapacityEvaluations empirical: '
       f'Status = {problem.status} | Channel Capacity = {np.round(problem.value, 6)} bits | '
-      f'Achieving Distribution = {np.round(px_var.value, 6)} | Cost = {np.round((px_var @ x).value, 6)}.')
+      f'Achieving Distribution = {np.round(px_var.value, 6)} | Given Cost = {cost} | '
+      f'Cost = {np.round((px_var @ x).value, 6)}.')
 
 print('[INFO] CostConstrainedBinaryChannels CapacityEvaluations theoretical: '
       f'Channel Capacity = {np.round(theoretical_capacity, 6)} bits | Achieving Distribution = {np.round(px, 6)}.')
