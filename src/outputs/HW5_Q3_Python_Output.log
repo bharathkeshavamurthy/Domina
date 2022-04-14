@@ -1,0 +1,60 @@
+C:\Users\kesha\Workspaces\venv\Scripts\python.exe C:/Users/kesha/Workspaces/Domina/src/CostConstrainedParallelBEC.py
+===============================================================================
+                                     CVXPY                                     
+                                    v1.1.18                                    
+===============================================================================
+(CVXPY) Apr 13 04:10:22 PM: Your problem has 3 variables, 3 constraints, and 0 parameters.
+(CVXPY) Apr 13 04:10:22 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Apr 13 04:10:22 PM: (If you need to solve this problem multiple times, but with different data, consider using parameters.)
+(CVXPY) Apr 13 04:10:22 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:10:22 PM: Compiling problem (target solver=SCS).
+(CVXPY) Apr 13 04:10:22 PM: Reduction chain: FlipObjective -> Dcp2Cone -> CvxAttr2Constr -> ConeMatrixStuffing -> SCS
+(CVXPY) Apr 13 04:10:22 PM: Applying reduction FlipObjective
+(CVXPY) Apr 13 04:10:22 PM: Applying reduction Dcp2Cone
+(CVXPY) Apr 13 04:10:22 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Apr 13 04:10:22 PM: Applying reduction ConeMatrixStuffing
+(CVXPY) Apr 13 04:10:22 PM: Applying reduction SCS
+(CVXPY) Apr 13 04:10:22 PM: Finished problem compilation (took 1.569e-02 seconds).
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:10:22 PM: Invoking solver SCS  to obtain a solution.
+------------------------------------------------------------------
+	       SCS v3.1.0 - Splitting Conic Solver
+	(c) Brendan O'Donoghue, Stanford University, 2012
+------------------------------------------------------------------
+problem:  variables n: 9, constraints m: 25
+cones: 	  l: linear vars: 7
+	  e: exp vars: 18, dual exp vars: 0
+settings: eps_abs: 1.0e-08, eps_rel: 1.0e-08, eps_infeas: 1.0e-07
+	  alpha: 1.50, scale: 1.00e-01, adaptive_scale: 1
+	  max_iters: 100000000, normalize: 1, warm_start: 0
+	  acceleration_lookback: 10, acceleration_interval: 10
+lin-sys:  sparse-direct
+	  nnz(A): 21, nnz(P): 0
+------------------------------------------------------------------
+ iter | pri res | dua res |   gap   |   obj   |  scale  | time (s)
+------------------------------------------------------------------
+     0| 2.31e+01  9.50e-01  1.00e+02 -5.35e+01  1.00e-01  4.18e-04 
+   150| 1.95e-09  8.96e-10  2.04e-09 -1.68e+00  8.69e-01  8.58e-03 
+------------------------------------------------------------------
+status:  solved
+timings: total: 8.96e-03s = setup: 3.69e-04s + solve: 8.59e-03s
+	 lin-sys: 7.02e-05s, cones: 8.08e-03s, accel: 1.05e-05s
+------------------------------------------------------------------
+objective = -1.678034
+------------------------------------------------------------------
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:10:22 PM: Problem status: optimal
+(CVXPY) Apr 13 04:10:22 PM: Optimal value: 1.678e+00
+(CVXPY) Apr 13 04:10:22 PM: Compilation took 1.569e-02 seconds
+(CVXPY) Apr 13 04:10:22 PM: Solver (including time spent in interface) took 1.556e-02 seconds
+[INFO] CostConstrainedParallelBEC empirical: Channel Capacity Maximization for parallel BECs | Problem Status = optimal | Capacity = 1.678034 bits | Achieving Bernoulli Parameters = [0.404068 0.358285 0.237646] | Given cost = 1.0 | Cost = 1.0.
+[INFO] CostConstrainedParallelBEC theoretical: Channel Capacity = 1.678034 bits | Achieving Bernoulli Parameters = [0.404068 0.358285 0.237646].
+
+Process finished with exit code 0

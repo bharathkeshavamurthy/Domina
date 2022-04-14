@@ -14,7 +14,7 @@ import cvxpy as cp
 CONFIGURATIONS
 """
 cp.set_num_threads(8)
-cost, number_of_channels, pe_s = 1.8, 3, np.array([0.1, 0.4, 0.7])
+cost, number_of_channels, pe_s = 1.0, 3, np.array([0.1, 0.4, 0.7])
 
 """
 UTILITIES
@@ -29,7 +29,7 @@ inv_pe_s = 1 / (1 - pe_s)
 
 
 def ps_fn(alpha):
-    ps = np.array([1 / (1 + alpha ** _i_pe) for _i_pe in inv_pe_s])
+    ps = np.array([1 / (1 + (alpha ** _i_pe)) for _i_pe in inv_pe_s])
     ps[ps < 0] = 0
     ps[ps > 1] = 1
     return ps
@@ -42,16 +42,16 @@ def bisect(low, high, tol, max_confidence):
         mid = (low + high) / 2
         ps = ps_fn(mid)
         if np.sum(ps) < cost_th:
-            low = mid
-        else:
             high = mid
+        else:
+            low = mid
         converged = abs(high - low) < tol
         confidence += 1 if converged else -confidence
     ps = ps_fn(mid)
     return np.sum([(1 - pe_s[i]) * entropy_fn(ps[i]) for i in range(number_of_channels)]), ps
 
 
-cap, pxs = bisect(1, 1e4, 1e-8, 10)
+cap, pxs = bisect(1.0, 1e4, 1e-8, 10)
 theoretical_capacity, theoretical_pxs = np.round(cap, 6), np.round(pxs, 6)
 
 """

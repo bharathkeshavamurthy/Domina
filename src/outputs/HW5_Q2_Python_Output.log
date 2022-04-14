@@ -1,0 +1,60 @@
+C:\Users\kesha\Workspaces\venv\Scripts\python.exe C:/Users/kesha/Workspaces/Domina/src/PowerAllocation.py
+===============================================================================
+                                     CVXPY                                     
+                                    v1.1.18                                    
+===============================================================================
+(CVXPY) Apr 13 04:08:43 PM: Your problem has 3 variables, 2 constraints, and 3 parameters.
+(CVXPY) Apr 13 04:08:43 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Apr 13 04:08:43 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:08:43 PM: Compiling problem (target solver=SCS).
+(CVXPY) Apr 13 04:08:43 PM: Reduction chain: FlipObjective -> Dcp2Cone -> CvxAttr2Constr -> ConeMatrixStuffing -> SCS
+(CVXPY) Apr 13 04:08:43 PM: Applying reduction FlipObjective
+(CVXPY) Apr 13 04:08:43 PM: Applying reduction Dcp2Cone
+(CVXPY) Apr 13 04:08:43 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Apr 13 04:08:43 PM: Applying reduction ConeMatrixStuffing
+(CVXPY) Apr 13 04:08:43 PM: Applying reduction SCS
+(CVXPY) Apr 13 04:08:43 PM: Finished problem compilation (took 0.000e+00 seconds).
+(CVXPY) Apr 13 04:08:43 PM: (Subsequent compilations of this problem, using the same arguments, should take less time.)
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:08:43 PM: Invoking solver SCS  to obtain a solution.
+------------------------------------------------------------------
+	       SCS v3.1.0 - Splitting Conic Solver
+	(c) Brendan O'Donoghue, Stanford University, 2012
+------------------------------------------------------------------
+problem:  variables n: 6, constraints m: 13
+cones: 	  l: linear vars: 4
+	  e: exp vars: 9, dual exp vars: 0
+settings: eps_abs: 1.0e-08, eps_rel: 1.0e-08, eps_infeas: 1.0e-07
+	  alpha: 1.50, scale: 1.00e-01, adaptive_scale: 1
+	  max_iters: 100000000, normalize: 1, warm_start: 0
+	  acceleration_lookback: 10, acceleration_interval: 10
+lin-sys:  sparse-direct
+	  nnz(A): 12, nnz(P): 0
+------------------------------------------------------------------
+ iter | pri res | dua res |   gap   |   obj   |  scale  | time (s)
+------------------------------------------------------------------
+     0| 1.50e+01  4.86e-01  1.77e+01 -1.00e+01  1.00e-01  2.53e-04 
+   225| 1.20e-08  5.18e-10  4.05e-09 -2.32e+00  1.00e-01  6.07e-03 
+------------------------------------------------------------------
+status:  solved
+timings: total: 6.37e-03s = setup: 2.88e-04s + solve: 6.08e-03s
+	 lin-sys: 5.96e-05s, cones: 5.63e-03s, accel: 7.87e-05s
+------------------------------------------------------------------
+objective = -2.321928
+------------------------------------------------------------------
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:08:43 PM: Problem status: optimal
+(CVXPY) Apr 13 04:08:43 PM: Optimal value: 2.322e+00
+(CVXPY) Apr 13 04:08:43 PM: Compilation took 0.000e+00 seconds
+(CVXPY) Apr 13 04:08:43 PM: Solver (including time spent in interface) took 1.555e-02 seconds
+[INFO] PowerAllocation empirical: Channel Capacity Maximization for parallel Gaussian channels | Problem Status = optimal | Capacity = 2.321928 bits | Optimal powers = [9. 6. 0.].
+[INFO] PowerAllocation theoretical: Channel Capacity Maximization for parallel Gaussian channels | Capacity = 2.321928 bits | Optimal powers = [9. 6. 0.].
+
+Process finished with exit code 0

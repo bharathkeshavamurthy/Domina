@@ -33,20 +33,20 @@ THEORETICAL EVALUATION (From HW-5 'Optimization Theory' Constructions)
 Binary Symmetric Channel
 '''
 
-# channel_type = 'BSC'
-# p_ = 1.0 - p + cost * (2.0 * p - 1.0)
-# transitions = np.array([[1 - p, p], [p, 1 - p]])
-# px = (lambda: [0.5, 0.5], lambda: [1 - cost, cost])[0.0 <= cost <= 0.5]()
-# theoretical_capacity = (lambda: 1.0 - entropy_fn(p), lambda: entropy_fn(p_) - entropy_fn(p))[0.0 <= cost <= 0.5]()
+channel_type = 'BSC'
+p_ = 1.0 - p + cost * (2.0 * p - 1.0)
+transitions = np.array([[1 - p, p], [p, 1 - p]])
+px = (lambda: [0.5, 0.5], lambda: [1 - cost, cost])[0.0 <= cost <= 0.5]()
+theoretical_capacity = (lambda: 1.0 - entropy_fn(p), lambda: entropy_fn(p_) - entropy_fn(p))[0.0 <= cost <= 0.5]()
 
 '''
 Binary Erasure Channel
 '''
 
-channel_type = 'BEC'
-transitions = np.array([[1 - p, 0.0], [p, p], [0.0, 1 - p]])
-px = (lambda: [0.5, 0.5], lambda: [1 - cost, cost])[0.0 <= cost <= 0.5]()
-theoretical_capacity = (lambda: 1 - p, lambda: (1 - p) * entropy_fn(cost))[0.0 <= cost <= 0.5]()
+# channel_type = 'BEC'
+# transitions = np.array([[1 - p, 0.0], [p, p], [0.0, 1 - p]])
+# px = (lambda: [0.5, 0.5], lambda: [1 - cost, cost])[0.0 <= cost <= 0.5]()
+# theoretical_capacity = (lambda: 1 - p, lambda: (1 - p) * entropy_fn(cost))[0.0 <= cost <= 0.5]()
 
 """
 EMPIRICAL EVALUATION

@@ -1,0 +1,62 @@
+C:\Users\kesha\Workspaces\venv\Scripts\python.exe C:/Users/kesha/Workspaces/Domina/src/CostConstrainedBinaryChannels.py
+===============================================================================
+                                     CVXPY                                     
+                                    v1.1.18                                    
+===============================================================================
+(CVXPY) Apr 13 04:06:40 PM: Your problem has 2 variables, 3 constraints, and 2 parameters.
+(CVXPY) Apr 13 04:06:40 PM: It is compliant with the following grammars: DCP, DQCP
+(CVXPY) Apr 13 04:06:40 PM: CVXPY will first compile your problem; then, it will invoke a numerical solver to obtain a solution.
+-------------------------------------------------------------------------------
+                                  Compilation                                  
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:06:40 PM: Compiling problem (target solver=SCS).
+(CVXPY) Apr 13 04:06:40 PM: Reduction chain: FlipObjective -> Dcp2Cone -> CvxAttr2Constr -> ConeMatrixStuffing -> SCS
+(CVXPY) Apr 13 04:06:40 PM: Applying reduction FlipObjective
+(CVXPY) Apr 13 04:06:40 PM: Applying reduction Dcp2Cone
+(CVXPY) Apr 13 04:06:40 PM: Applying reduction CvxAttr2Constr
+(CVXPY) Apr 13 04:06:40 PM: Applying reduction ConeMatrixStuffing
+(CVXPY) Apr 13 04:06:40 PM: Applying reduction SCS
+(CVXPY) Apr 13 04:06:40 PM: Finished problem compilation (took 0.000e+00 seconds).
+(CVXPY) Apr 13 04:06:40 PM: (Subsequent compilations of this problem, using the same arguments, should take less time.)
+-------------------------------------------------------------------------------
+                                Numerical solver                               
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:06:40 PM: Invoking solver SCS  to obtain a solution.
+------------------------------------------------------------------
+	       SCS v3.1.0 - Splitting Conic Solver
+	(c) Brendan O'Donoghue, Stanford University, 2012
+------------------------------------------------------------------
+problem:  variables n: 4, constraints m: 10
+cones: 	  z: primal zero / dual free vars: 1
+	  l: linear vars: 3
+	  e: exp vars: 6, dual exp vars: 0
+settings: eps_abs: 1.0e-08, eps_rel: 1.0e-08, eps_infeas: 1.0e-07
+	  alpha: 1.50, scale: 1.00e-01, adaptive_scale: 1
+	  max_iters: 100000000, normalize: 1, warm_start: 0
+	  acceleration_lookback: 10, acceleration_interval: 10
+lin-sys:  sparse-direct
+	  nnz(A): 12, nnz(P): 0
+------------------------------------------------------------------
+ iter | pri res | dua res |   gap   |   obj   |  scale  | time (s)
+------------------------------------------------------------------
+     0| 1.92e+01  1.04e+00  6.27e+01 -3.19e+01  1.00e-01  2.36e-04 
+   125| 1.46e-09  1.72e-09  1.02e-09 -5.31e-01  1.13e+00  1.83e-03 
+------------------------------------------------------------------
+status:  solved
+timings: total: 2.14e-03s = setup: 3.05e-04s + solve: 1.84e-03s
+	 lin-sys: 2.67e-05s, cones: 1.55e-03s, accel: 4.30e-06s
+------------------------------------------------------------------
+objective = -0.531004
+------------------------------------------------------------------
+-------------------------------------------------------------------------------
+                                    Summary                                    
+-------------------------------------------------------------------------------
+(CVXPY) Apr 13 04:06:40 PM: Problem status: optimal
+(CVXPY) Apr 13 04:06:40 PM: Optimal value: 5.310e-01
+(CVXPY) Apr 13 04:06:40 PM: Compilation took 0.000e+00 seconds
+(CVXPY) Apr 13 04:06:40 PM: Solver (including time spent in interface) took 0.000e+00 seconds
+[INFO] CostConstrainedBinaryChannels | BSC
+[INFO] CostConstrainedBinaryChannels CapacityEvaluations empirical: Status = optimal | Channel Capacity = 0.531004 bits | Achieving Distribution = [0.5 0.5] | Given Cost = 1.0 | Cost = 0.5.
+[INFO] CostConstrainedBinaryChannels CapacityEvaluations theoretical: Channel Capacity = 0.531004 bits | Achieving Distribution = [0.5 0.5].
+
+Process finished with exit code 0
